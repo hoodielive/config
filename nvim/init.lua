@@ -1,4 +1,4 @@
--- Vars.
+-- Vars
 
 -- A table to access global variables.
 local g = vim.g
@@ -46,20 +46,15 @@ opt.wildmode = 'longest:list,full'
 
 -- Show me invisible characters.
 opt.list = true
-opt.listchars = 'tab:▸ ,trail:·' -- make these beautiful with hack fonts.
+
+-- TODO Make these beautiful with hack fonts.
+opt.listchars = 'tab:▸ ,trail:·' 
 
 -- Maintain indent of current line.
 opt.autoindent = true
 
 -- Allow unrestricted backspacing in insert mode.
 opt.backspace ='indent,start,eol'
-
--- Don't make backups before writing.
---opt.backup = false
---
--- I do want backups tho.
---opt.backup = false 
---opt.backupdir = '/home/enilo/.local/share/nvim/backup//'
 
 -- Highlight current line.
 opt.cursorline = false
@@ -71,7 +66,7 @@ opt.directory = '/home/enilo/.config/nvim/swap//,.'
 -- However, do not automatically select it.
 opt.completeopt = 'menuone,noselect'
 
--- Shows the effects of a command incrementally. 
+-- Shows the effects of a command incrementally.
 opt.inccommand = 'nosplit'
 
 -- Use a swap file for buffer.
@@ -83,19 +78,19 @@ vim.cmd [[set mouse=a]]
 -- Show relative column and character.
 opt.ruler = true
 
--- Don't show me which mode I'm in. I'm grown. 
+-- Don't show me which mode I'm in. I'm grown.
 opt.showmode = false
 
 -- Show commands.
 opt.showcmd = true
 
 -- I'd like to have relative numbers.
-opt.relativenumber = true
+opt.relativenumber = false
 
--- sigh.
+-- Sigh.
 opt.laststatus = 2
 
--- No double spaces for . ? 
+-- No double spaces for . ?
 opt.joinspaces = false
 
 -- Ignore case.
@@ -123,7 +118,7 @@ opt.confirm = false
 opt.title = true
 
 -- Enable background buffers.
--- Make me more like emacs.. lol
+-- Make Me More Like Emacs.
 opt.hidden = true
 
 -- Directory.
@@ -131,7 +126,8 @@ opt.dir = '/tmp'
 
 -- Install packer.nvim as our plugin manager.
 -- There are however others that are a bit more minimal e.g. paq-nvim.
--- You could however continue to use vim-plug. 
+-- You could however continue to use vim-plug.
+
 local execute = vim.api.nvim_command
 local install_path = vim.fn.stdpath('data')..'/site/pack/packer/opt/packer.nvim'
 
@@ -149,20 +145,31 @@ vim.api.nvim_exec([[
 
 local use = require('packer').use
 require('packer').startup(function()
-  use {'wbthomason/packer.nvim', opt = true}
-  use 'kana/vim-smartinput' -- auto close delimiters
+  
+  use {
+    'wbthomason/packer.nvim', 
+     opt = true
+  }
+
+  -- Auto close delimiters
+  use 'kana/vim-smartinput' 
   use 'tpope/vim-commentary'
-  use {'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}} }
+  use {'nvim-telescope/telescope.nvim', 
+    requires = {{'nvim-lua/popup.nvim'}, 
+               {'nvim-lua/plenary.nvim'}} 
+  }
   use 'joshdick/onedark.vim'
   use 'itchyny/lightline.vim'
-  -- use { 'lukas-reineke/indent-blankline.nvim', branch="master" }
   use 'neovim/nvim-lspconfig'
-  -- Provides autocompletion and is completely written in lua.
-  -- use 'hrsh7th/nvim-compe'
+
+  -- Provides autocompletion and is completely 
+  -- written in lua.
   use 'hrsh7th/nvim-cmp'
-  --use 'nvim-lua/completion-nvim'
-  -- snippets -- why should you type when you can get your minions to do it for you?
-  use 'sirver/ultisnips' -- the engine 
+
+  -- Snippet Engine
+  use 'sirver/ultisnips'
+
+  -- The actual snippets
   use 'honza/vim-snippets' -- the coal (the actuall snippets)
   use 'nvim-treesitter/nvim-treesitter'
   use {
@@ -172,33 +179,51 @@ require('packer').startup(function()
     {'junegunn/fzf.vim'},  -- to enable preview (optional)
    },
   }
+
+  -- Support support.
   use 'williamboman/nvim-lsp-installer'
+
+  -- Color Schemes.
   use 'dracula/vim'
   use 'daylerees/colour-schemes'
   use 'morhetz/gruvbox'
   use 'Shatur/neovim-ayu'
+
+  -- Ranger Support.
   use 'kevinhwang91/rnvimr'
+
+  -- Surround me and change me.
   use 'tpope/vim-surround'
-  -- Git Integration
+
+  -- Git Integration.
   use 'mhinz/vim-signify'
   use 'tpope/vim-fugitive'
   use 'tpope/vim-rhubarb'
   use 'junegunn/gv.vim'
+ 
+  -- Orgmode.
+  use 'axvr/org.vim'
 end)
 
 -- Configure Themes.
 opt.termguicolors = true
 opt.background = 'dark'
--- cmd 'colorscheme gruvbox'
-cmd 'colorscheme ayu'
+
+-- Present color scheme.
+cmd 'colorscheme ayu-dark'
 
 require('ayu').setup({
   mirage = true,
   overrides = {},
 })
+
 -- Configure treesitter.
 local ts = require 'nvim-treesitter.configs'
-ts.setup {ensure_installed = 'maintained', highlight = { enable = true }, indent = { enable = true}}
+ts.setup {
+  ensure_installed = 'maintained', 
+  highlight = { enable = true }, 
+  indent = { enable = true}
+}
 
 -- Briefly highlight a yanked line.
 -- But disable in visual mode.
