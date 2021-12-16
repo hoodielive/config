@@ -26,15 +26,6 @@ local opts = { noremap = true }
 -- Search these paths.
 opt.path = vim.opt.path + '.,**'
 
--- Keybindings.
-
--- You will use jj to esc while in insert mode.
-keymap('i', 'jj', '<ESC>', opts)
-keymap('n', '<C-L>', ':nohl<CR><C-L>', opts)
-
-g.rnvimr_ex_enable = 1
-keymap("n", "<space>r", ":RnvimrToggle<CR>", opts)
-
 -- Set indentation rules.
 opt.expandtab = true
 opt.shiftwidth = 2
@@ -171,23 +162,39 @@ require('packer').startup(function()
 
   -- The actual snippets
   use 'honza/vim-snippets' -- the coal (the actuall snippets)
+
+  -- TreeSitter.
   use 'nvim-treesitter/nvim-treesitter'
   use {
-  'ojroques/nvim-lspfuzzy',
-  requires = {
-    {'junegunn/fzf'},
-    {'junegunn/fzf.vim'},  -- to enable preview (optional)
-   },
+    'ojroques/nvim-lspfuzzy',
+    requires = {
+      {'junegunn/fzf'},
+      {'junegunn/fzf.vim'},  -- to enable preview (optional)
+    },
+  }
+
+  -- Lua implementation of fzf
+  use {
+    'ibhagwan/fzf-lua',
+    -- icon support
+    requires = { 'kyazdani42/nvim-web-devicons' }
   }
 
   -- Support support.
   use 'williamboman/nvim-lsp-installer'
 
   -- Color Schemes.
+
   use 'dracula/vim'
   use 'daylerees/colour-schemes'
   use 'morhetz/gruvbox'
   use 'Shatur/neovim-ayu'
+  use 'tyrannicaltoucan/vim-deep-space'
+  use 'haystackandroid/snow'
+  -- Read the doco as their
+  -- are various params that 
+  -- make this plug even more cool.
+  use 'junegunn/seoul256.vim'
 
   -- Ranger Support.
   use 'kevinhwang91/rnvimr'
@@ -203,6 +210,12 @@ require('packer').startup(function()
  
   -- Orgmode.
   use 'axvr/org.vim'
+
+  -- A Zen mode for Writing.
+  use 'junegunn/goyo.vim'
+
+  -- And limelight for hyper-focus.
+  use 'junegunn/limelight.vim'
 end)
 
 -- Configure Themes.
@@ -217,6 +230,21 @@ require('ayu').setup({
   overrides = {},
 })
 
+-- g.lightline.colorscheme = {'deepspace'}
+
+-- Keybindings.
+
+-- You will use jj to esc while in insert mode.
+keymap('i', 'jj', '<ESC>', opts)
+keymap('n', '<C-L>', ':nohl<CR><C-L>', opts)
+
+g.rnvimr_ex_enable = 1
+keymap("n", "<space>r", ":RnvimrToggle<CR>", opts)
+
+-- Configure FZF.
+keymap('n', '<c-P>', "<cmd>lua require('fzf-lua').files()<CR>", { noremap = true, silent = true })
+
+
 -- Configure treesitter.
 local ts = require 'nvim-treesitter.configs'
 ts.setup {
@@ -229,6 +257,8 @@ ts.setup {
 -- But disable in visual mode.
 cmd 'au TextYankPost * lua vim.highlight.on_yank { on_visual = false }'
 
+-- LSP server configurations.
 local lspconfig = require "lspconfig"
 lspconfig.rust_analyzer.setup {on_attach = on_attach}
 lspconfig.ccls.setup { on_attach = on_attach }
+
