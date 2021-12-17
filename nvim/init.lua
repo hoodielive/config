@@ -1,5 +1,5 @@
 -- Fundamentals settings.
-require 'fundamentals'
+require 'settings'
 
 -- Keybinding configurations.
 require 'keybindings'
@@ -8,5 +8,11 @@ require 'keybindings'
 require 'plugins'
 
 -- LSP configuration files.
-require 'lspconfigs'
+require 'egun-lsp'
+
+-- Color in hexidecimal form.
+require 'egun-colorizer'
+
+-- GalaxyLine is cool for now.
+require 'egun-galaxyline'
 

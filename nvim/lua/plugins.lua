@@ -34,6 +34,8 @@ require('packer').startup(function()
   }
   use 'joshdick/onedark.vim'
   use 'itchyny/lightline.vim'
+  use { 'glepnir/galaxyline.nvim',
+        requires = 'kyazdani42/nvim-web-devicons' }
   use 'neovim/nvim-lspconfig'
 
   -- Provides autocompletion and is completely 
@@ -67,7 +69,7 @@ require('packer').startup(function()
   use 'williamboman/nvim-lsp-installer'
 
   -- Color Schemes.
-
+  use 'folke/tokyonight.nvim'
   use 'dracula/vim'
   use 'daylerees/colour-schemes'
   use 'morhetz/gruvbox'
@@ -75,9 +77,12 @@ require('packer').startup(function()
   use 'tyrannicaltoucan/vim-deep-space'
   use 'haystackandroid/snow'
   -- Read the doco as their
-  -- are various params that 
+  -- are various params that
   -- make this plug even more cool.
   use 'junegunn/seoul256.vim'
+
+  -- Color Support.
+  use 'norcalli/nvim-colorizer.lua'
 
   -- Ranger Support.
   use 'kevinhwang91/rnvimr'
