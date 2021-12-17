@@ -118,12 +118,12 @@ opt.termguicolors = true
 opt.background = 'dark'
 
 -- Present color scheme.
-cmd 'colorscheme ayu-dark'
-
-require('ayu').setup({
-  mirage = true,
-  overrides = {},
-})
+-- cmd 'colorscheme ayu-dark'
+-- 
+-- require('ayu').setup({
+--   mirage = true,
+--   overrides = {},
+-- })
 
 -- g.lightline.colorscheme = {'deepspace'}
 
