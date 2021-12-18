@@ -99,6 +99,11 @@ _G.packer_plugins = {
     path = "/home/enilo/.local/share/nvim/site/pack/packer/start/galaxyline.nvim",
     url = "https://github.com/glepnir/galaxyline.nvim"
   },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "/home/enilo/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
   ["goyo.vim"] = {
     loaded = true,
     path = "/home/enilo/.local/share/nvim/site/pack/packer/start/goyo.vim",
@@ -124,6 +129,11 @@ _G.packer_plugins = {
     path = "/home/enilo/.local/share/nvim/site/pack/packer/start/limelight.vim",
     url = "https://github.com/junegunn/limelight.vim"
   },
+  ["neoscroll.nvim"] = {
+    loaded = true,
+    path = "/home/enilo/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
+    url = "https://github.com/karb94/neoscroll.nvim"
+  },
   ["neovim-ayu"] = {
     loaded = true,
     path = "/home/enilo/.local/share/nvim/site/pack/packer/start/neovim-ayu",
@@ -133,6 +143,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/enilo/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
     url = "https://github.com/windwp/nvim-autopairs"
+  },
+  ["nvim-bufferline.lua"] = {
+    loaded = true,
+    path = "/home/enilo/.local/share/nvim/site/pack/packer/start/nvim-bufferline.lua",
+    url = "https://github.com/akinsho/nvim-bufferline.lua"
   },
   ["nvim-cmp"] = {
     loaded = true,

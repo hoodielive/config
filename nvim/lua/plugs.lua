@@ -119,4 +119,13 @@ require('packer').startup(function()
 
   -- Autopairs.
   use 'windwp/nvim-autopairs'
+  
+  -- Sensible scrolling.
+  use 'karb94/neoscroll.nvim'
+
+  -- Bufferline.
+  use 'akinsho/nvim-bufferline.lua'
+
+  -- Gitsigns.
+  use {'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' }}
 end)
