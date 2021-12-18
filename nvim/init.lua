@@ -33,3 +33,18 @@ require 'egun-galaxyline'
 -- Nvim-Tree (lua)
 require 'egun-nvimtree'
 
+
+-- Make finding stuff easier.
+require 'egun-telescope'
+
+
+-- Configure Floating term.
+require 'egun-floaterm'
+
+
+-- TreeSitter configs.
+require 'egun-treesitter'
+
+
+-- Autopairs.
+require 'egun-autopairs'

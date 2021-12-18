@@ -18,11 +18,13 @@ local opt = vim.opt
 
 -- Shortcut for setting mappings.
 local keymap = vim.api.nvim_set_keymap
-
 local opts = { noremap = true }
 
 -- Search these paths.
 opt.path = vim.opt.path + '.,**'
+
+-- Rebind the mapleader key
+vim.g.mapleader = ' '
 
 -- Set indentation rules.
 opt.expandtab = true
@@ -116,16 +118,6 @@ opt.dir = '/tmp'
 -- Configure Themes.
 opt.termguicolors = true
 opt.background = 'dark'
-
--- Present color scheme.
--- cmd 'colorscheme ayu-dark'
--- 
--- require('ayu').setup({
---   mirage = true,
---   overrides = {},
--- })
-
--- g.lightline.colorscheme = {'deepspace'}
 
 -- Briefly highlight a yanked line.
 -- But disable in visual mode.

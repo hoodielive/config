@@ -129,6 +129,11 @@ _G.packer_plugins = {
     path = "/home/enilo/.local/share/nvim/site/pack/packer/start/neovim-ayu",
     url = "https://github.com/Shatur/neovim-ayu"
   },
+  ["nvim-autopairs"] = {
+    loaded = true,
+    path = "/home/enilo/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/enilo/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -239,6 +244,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/enilo/.local/share/nvim/site/pack/packer/start/vim-deep-space",
     url = "https://github.com/tyrannicaltoucan/vim-deep-space"
+  },
+  ["vim-floaterm"] = {
+    loaded = true,
+    path = "/home/enilo/.local/share/nvim/site/pack/packer/start/vim-floaterm",
+    url = "https://github.com/voldikss/vim-floaterm"
   },
   ["vim-fugitive"] = {
     loaded = true,

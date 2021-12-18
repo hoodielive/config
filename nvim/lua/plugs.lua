@@ -83,6 +83,9 @@ require('packer').startup(function()
   -- Color Support.
   use 'norcalli/nvim-colorizer.lua'
 
+  -- Float terminus.
+  use 'voldikss/vim-floaterm'
+
   -- Ranger Support.
   use 'kevinhwang91/rnvimr'
 
@@ -113,4 +116,7 @@ require('packer').startup(function()
 	'kyazdani42/nvim-web-devicons', -- optional, for file icon
       },
   }
+
+  -- Autopairs.
+  use 'windwp/nvim-autopairs'
 end)

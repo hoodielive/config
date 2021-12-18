@@ -14,7 +14,8 @@
     "Main function": {
         "prefix": ["main"],
     	"body": [
-    	    "int main() {",
+    	    "int main()"
+            {",
     	    "\t$0\n",
     	    "\treturn 0;",
     	    "}"
