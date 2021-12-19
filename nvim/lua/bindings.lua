@@ -20,3 +20,4 @@ map("n", "<space>r", ":RnvimrToggle<CR>", opts)
 -- Evoke fzf with CTRL-p
 map('n', '<c-P>', "<cmd>lua require('fzf-lua').files()<CR>", { noremap = true, silent = true })
 
+map('n', '<c-t>',":ToggleTerm<CR>", opts)

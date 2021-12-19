@@ -10,6 +10,9 @@ require 'egun-theme'
 -- Plugin configurations.
 require 'plugs'
 
+-- Completion for lsp.
+require 'egun-completion'
+
 -- LSP configuration files.
 require 'egun-lsp'
 
@@ -45,3 +48,9 @@ require 'egun-bufferline'
 
 -- NeoScrollus
 require 'egun-neoscroll'
+
+-- Which-key
+require 'egun-whichkey'
+
+-- Give me pretty lsp help.
+require 'egun-lspsaga'
