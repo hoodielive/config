@@ -1,0 +1,25 @@
+Query packages and install them.
+https://wiki.archlinux.org/title/Fzf
+
+
+# Run pacman -Fy with root privileges at least once
+# before invocation to sync the pacman file db.
+
+sudo pacman -Fy 
+
+# Fuzzy-search through all available packages,
+# with package info shown in a preview window,
+# then install selected packages.
+
+pacman -Slq | fzf -m --preview 'cat <(pacman -Si {1}) <(pacman -Fl {1} | awk "{print \$2}")' | \ 
+xargs -ro sudo pacman -S
+
+yay -Slq | fzf -m --preview 'cat <(yay -Si {1}) <(yay -Fl {1} | awk "{print \$2}")' | xargs -ro  yay -S
+
+# List all your installed packages, and then remove selected packages.
+pacman -Qq | fzf --multi --preview 'pacman -Qi {1}' | xargs -ro sudo pacman -Rns
+
+
+
+
+
