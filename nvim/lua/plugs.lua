@@ -8,7 +8,6 @@ if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
 end
 
 vim.cmd [[packadd packer.nvim]]
-
 vim.api.nvim_exec([[
   augroup Packer
     autocmd!
@@ -19,8 +18,7 @@ vim.api.nvim_exec([[
 local use = require('packer').use
 require('packer').startup(function()
 
-  use 
-  {
+  use {
     'wbthomason/packer.nvim',
      opt = true
   }
@@ -28,35 +26,19 @@ require('packer').startup(function()
   -- Auto close delimiters
   use 'kana/vim-smartinput'
   use 'tpope/vim-commentary'
-  use 
-  {
-    'nvim-telescope/telescope.nvim',
-    requires = 
-    {
-      {'nvim-lua/popup.nvim'},
-      {'nvim-lua/plenary.nvim'}
-    }
+  use {'nvim-telescope/telescope.nvim',
+    requires = {{'nvim-lua/popup.nvim'},
+               {'nvim-lua/plenary.nvim'}}
   }
-
   use 'joshdick/onedark.vim'
   use 'itchyny/lightline.vim'
-
-  use 
-  { 
-    'glepnir/galaxyline.nvim',
-     requires = 
-       'kyazdani42/nvim-web-devicons' 
-  }
-
+  use { 'glepnir/galaxyline.nvim',
+        requires = 'kyazdani42/nvim-web-devicons' }
   use 'neovim/nvim-lspconfig'
 
   -- Provides autocompletion and is completely
   -- written in lua.
   use 'hrsh7th/nvim-cmp'
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-cmdline'
 
   -- Snippet Engine and Snippets
   use 'sirver/ultisnips'
@@ -66,8 +48,7 @@ require('packer').startup(function()
 
   -- TreeSitter.
   use 'nvim-treesitter/nvim-treesitter'
-  use 
-  {
+  use {
     'ojroques/nvim-lspfuzzy',
     requires = 
     {
@@ -77,15 +58,10 @@ require('packer').startup(function()
   }
 
   -- Lua implementation of fzf
-  use 
-  {
+  use {
     'ibhagwan/fzf-lua',
-
     -- icon support
-    requires = 
-    { 
-      'kyazdani42/nvim-web-devicons' 
-    }
+    requires = { 'kyazdani42/nvim-web-devicons' }
   }
 
   -- Support support.
@@ -99,7 +75,6 @@ require('packer').startup(function()
   use 'Shatur/neovim-ayu'
   use 'tyrannicaltoucan/vim-deep-space'
   use 'haystackandroid/snow'
-
   -- Read the doco as their
   -- are various params that
   -- make this plug even more cool.
@@ -144,7 +119,7 @@ require('packer').startup(function()
 
   -- Autopairs.
   use 'windwp/nvim-autopairs'
-
+  
   -- Sensible scrolling.
   use 'karb94/neoscroll.nvim'
 
@@ -152,21 +127,5 @@ require('packer').startup(function()
   use 'akinsho/nvim-bufferline.lua'
 
   -- Gitsigns.
-  use 
-  {
-    'lewis6991/gitsigns.nvim', 
-     requires = 
-     { 
-       'nvim-lua/plenary.nvim' 
-     }
-   }
-
-  -- Whichkey.
-  use 'folke/which-key.nvim'
-
-  -- Toggleterm.
-  use 'akinsho/toggleterm.nvim'
-
-  -- LSP Saga.
-  use 'glepnir/lspsaga.nvim'
+  use {'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' }}
 end)

@@ -1,9 +1,3 @@
-
--- Technique/Regex for replacing vim comments
--- with Lua comments: %s/(^| )"(.+)/--\2
--- start of line or blank space followed by a quote
--- followed by other stuff of something else it was followed by.
-
 -- A table to access global variables.
 local g = vim.g
 
@@ -61,7 +55,7 @@ opt.directory = '/home/enilo/.config/nvim/swap//,.'
 
 -- Show menu box even if there is only 1 option
 -- However, do not automatically select it.
-opt.completeopt = 'menu,menuone,noselect'
+opt.completeopt = 'menuone,noselect'
 
 -- Shows the effects of a command incrementally.
 opt.inccommand = 'nosplit'
@@ -124,9 +118,6 @@ opt.dir = '/tmp'
 -- Configure Themes.
 opt.termguicolors = true
 opt.background = 'dark'
-
--- I don't ever want to hear any bells. E V E R!
-opt.belloff = "all"
 
 -- Briefly highlight a yanked line.
 -- But disable in visual mode.

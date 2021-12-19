@@ -1,3 +1,0 @@
-require('cmp')
-require('diagnostic_signs')
-require('language_servers')
