@@ -1,27 +1,39 @@
 # Packages 
 
-# Fuzzy finder written in Rust.
-skim
-
 # Fuzzy finder/selector.
+
 fzy
 
 # Youtube Fuzzy Searcher.
+
 ytfzf
+
+# Fzf through Packages :).
+# Adds fzf to paru.
+
+paruz
 
 
 # Cargo Packages.
 
 
+# Fuzzy finder written in Rust.
+
+skim
+
 # Exa rust implementation of ls.
+
 exa
 
 # LSD rust implementation of ls.
+
 lsd
 
 # Rigprep rust implemetation of grep.
+
 ripgrep
 hgrep
 
 # Tokei shows programming languages being used in dir.
+
 tokei
