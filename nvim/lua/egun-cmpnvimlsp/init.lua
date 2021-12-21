@@ -14,3 +14,4 @@ require'lspconfig'.clangd.setup
 {
   capabilites = capabilites,
 }
+

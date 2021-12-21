@@ -90,6 +90,7 @@ require('packer').startup(function()
 
   -- Support support.
   use 'williamboman/nvim-lsp-installer'
+--  use 'TiddoLangerak/Omnisharp'
 
   -- Color Schemes.
   use 'folke/tokyonight.nvim'
@@ -167,6 +168,14 @@ require('packer').startup(function()
   -- Toggleterm.
   use 'akinsho/toggleterm.nvim'
 
-  -- LSP Saga.
+  -- LSP Saga. (not-configured-fully)
   use 'glepnir/lspsaga.nvim'
+
+  -- Change to Project Root. (not-configured)
+  use 'airblade/vim-rooter'
+
+  -- OrgMode! Yay, bring it!
+  use 'nvim-orgmode/orgmode'
+  use 'akinsho/org-bullets.nvim'
+
 end)

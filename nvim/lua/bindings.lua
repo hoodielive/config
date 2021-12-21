@@ -7,6 +7,7 @@ function map(mode, lhs, rhs, opts)
     end
     vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
+
 -- You will use jj to esc while in insert mode.
 map('i', 'jj', '<ESC>', opts)
 
@@ -21,3 +22,7 @@ map("n", "<space>r", ":RnvimrToggle<CR>", opts)
 map('n', '<c-P>', "<cmd>lua require('fzf-lua').files()<CR>", { noremap = true, silent = true })
 
 map('n', '<c-t>',":ToggleTerm<CR>", opts)
+
+-- map('n', '<c-x>', ":split<CR>", opts)
+
+map('n', '<c-\\>', ":vsplit<CR>", opts)

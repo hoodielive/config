@@ -12,12 +12,14 @@ vim.g.tokyonight_dark_float = true
 vim.cmd 'colorscheme tokyonight'
 
 
+-- Explore Transparency
+-- vim.g.hi = "normal guibg=000000"
+-- vim.g.hi = "guibg=000000"
 
 
 
 
-
-
+-- Ayu-Dark
 -- Present color scheme.
 -- cmd 'colorscheme ayu-dark'
 -- 

@@ -1,3 +1,10 @@
+-- Plugin configurations.
+
+-- TODO Figure out a way to make sure
+-- packer.nvim is installed before launching
+-- corresponding configurations.
+require 'plugs'
+
 -- Fundamentals settings.
 require 'options'
 
@@ -6,9 +13,6 @@ require 'bindings'
 
 -- Themer.
 require 'egun-theme'
-
--- Plugin configurations.
-require 'plugs'
 
 -- Completion for lsp.
 require 'egun-completion'
