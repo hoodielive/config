@@ -8,6 +8,7 @@ require('bufferline').setup {
         diagnostics = 'nvim_lsp',
         diagnostics_indicator = diagnostics_indicator,
         custom_filter = custom_filter,
+
         offsets = {
             {
                 filetype = 'NvimTree',
@@ -32,11 +33,14 @@ local opt = {silent = true}
 local map = vim.api.nvim_set_keymap
 
 -- Add new buffer and move to it
-map('n', '<Leader>t', ':tabnew ', { silent = false })
+map('n', '<Leader>bt', ':tabnew ', { silent = false })
+
 -- Buffer pick functionality
-map('n', '<Leader>b', ':BufferLinePick<CR>', opt)
+map('n', '<Leader>bp', ':BufferLinePick<CR>', opt)
+
 -- Remove a buffer
-map('n', '<Leader>q', ':bd<CR>', opt)
+map('n', '<Leader>bq', ':bd<CR>', opt)
+
 -- Switch among buffers
 map('n', '<TAB>', ':bnext<CR>', opt)
 map('n', '<S-TAB>', ':bprevious<CR>', opt)

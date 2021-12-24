@@ -1,0 +1,10 @@
+#+TITLE: Psuedo Code
+
+* Bootstrapping
+
+```bash
+
+# Bootstrapping.
+# Make sure packer.nvim installs plugins before applying configs.
+
+```

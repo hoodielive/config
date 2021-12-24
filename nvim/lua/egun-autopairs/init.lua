@@ -14,7 +14,7 @@ npairs.add_rules {
   Rule('( ', ' )')
     :with_pair(function() return false end)
     :with_move(function(opts)
-      return opts.prev_char:match('.%') ~= nil
+      return opts.prev_char:match('.%)') ~= nil
     end),
 
   Rule('{ ', ' }')

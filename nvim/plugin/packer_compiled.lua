@@ -99,6 +99,11 @@ _G.packer_plugins = {
     path = "/home/enilo/.local/share/nvim/site/pack/packer/start/colour-schemes",
     url = "https://github.com/daylerees/colour-schemes"
   },
+  ["dashboard-nvim"] = {
+    loaded = true,
+    path = "/home/enilo/.local/share/nvim/site/pack/packer/start/dashboard-nvim",
+    url = "https://github.com/glepnir/dashboard-nvim"
+  },
   fzf = {
     loaded = true,
     path = "/home/enilo/.local/share/nvim/site/pack/packer/start/fzf",
@@ -138,6 +143,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/enilo/.local/share/nvim/site/pack/packer/start/gv.vim",
     url = "https://github.com/junegunn/gv.vim"
+  },
+  ["kanagawa.nvim"] = {
+    loaded = true,
+    path = "/home/enilo/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
+    url = "https://github.com/rebelot/kanagawa.nvim"
+  },
+  ["lazygit.nvim"] = {
+    loaded = true,
+    path = "/home/enilo/.local/share/nvim/site/pack/packer/start/lazygit.nvim",
+    url = "https://github.com/kdheepak/lazygit.nvim"
   },
   ["lightline.vim"] = {
     loaded = true,
@@ -339,6 +354,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/enilo/.local/share/nvim/site/pack/packer/start/vim-surround",
     url = "https://github.com/tpope/vim-surround"
+  },
+  ["vim-test"] = {
+    loaded = true,
+    path = "/home/enilo/.local/share/nvim/site/pack/packer/start/vim-test",
+    url = "https://github.com/vim-test/vim-test"
   },
   ["vim-vsnip"] = {
     loaded = true,

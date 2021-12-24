@@ -94,12 +94,16 @@ require('packer').startup(function()
 
   -- Color Schemes.
   use 'folke/tokyonight.nvim'
+  use 'rebelot/kanagawa.nvim'
   use 'dracula/vim'
   use 'daylerees/colour-schemes'
   use 'morhetz/gruvbox'
   use 'Shatur/neovim-ayu'
   use 'tyrannicaltoucan/vim-deep-space'
   use 'haystackandroid/snow'
+
+  -- Welcome me.
+  use 'glepnir/dashboard-nvim'
 
   -- Read the doco as their
   -- are various params that
@@ -123,6 +127,7 @@ require('packer').startup(function()
   use 'tpope/vim-fugitive'
   use 'tpope/vim-rhubarb'
   use 'junegunn/gv.vim'
+  use 'kdheepak/lazygit.nvim'
 
   -- Orgmode.
   use 'axvr/org.vim'
@@ -177,5 +182,11 @@ require('packer').startup(function()
   -- OrgMode! Yay, bring it!
   use 'nvim-orgmode/orgmode'
   use 'akinsho/org-bullets.nvim'
+
+  -- Runner.
+  use 'vim-test/vim-test'
+
+  -- QuickScope.
+  -- use 'unblevable/quick-scope'
 
 end)

@@ -14,6 +14,9 @@ require 'bindings'
 -- Themer.
 require 'egun-theme'
 
+-- Dashboard.
+require 'egun-dashboard'
+
 -- Completion for lsp.
 require 'egun-completion'
 
