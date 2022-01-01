@@ -37,4 +37,4 @@ map('n', '<space>m', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
 map('n', '<space>i', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
 map('n', '<space>s', '<cmd>lua vim.lsp.buf.document_symbol()<CR>', opts)
 
-map('n', '<space>L,', ':LazyGit<CR>', opts)
+map('n', '<space>L', ':LazyGit<CR>', opts)

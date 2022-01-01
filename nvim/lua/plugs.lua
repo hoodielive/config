@@ -92,12 +92,19 @@ require('packer').startup(function()
   use 'williamboman/nvim-lsp-installer'
 --  use 'TiddoLangerak/Omnisharp'
 
+  -- Unreal Engine plugin.
+  use 'drichardson/vim-unreal'
+
+  -- Unity Snippets
+  use 'Mathijs-Bakker/vim-unity-snippets'
+
   -- Color Schemes.
   use 'folke/tokyonight.nvim'
   use 'rebelot/kanagawa.nvim'
   use 'dracula/vim'
   use 'daylerees/colour-schemes'
   use 'morhetz/gruvbox'
+  use 'sainnhe/gruvbox-material'
   use 'Shatur/neovim-ayu'
   use 'tyrannicaltoucan/vim-deep-space'
   use 'haystackandroid/snow'
@@ -177,7 +184,7 @@ require('packer').startup(function()
   use 'glepnir/lspsaga.nvim'
 
   -- Change to Project Root. (not-configured)
-  use 'airblade/vim-rooter'
+  -- use 'airblade/vim-rooter'
 
   -- OrgMode! Yay, bring it!
   use 'nvim-orgmode/orgmode'
@@ -188,5 +195,13 @@ require('packer').startup(function()
 
   -- QuickScope.
   -- use 'unblevable/quick-scope'
+
+  use 'ziglang/zig.vim'
+
+  -- Generate Table of Contents from Comments
+  use 'l00sed/vim-css-toc'
+
+  -- Support for vlang programming language.
+  use 'ollykel/v-vim'
 
 end)

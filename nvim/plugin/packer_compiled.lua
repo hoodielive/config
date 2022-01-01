@@ -44,8 +44,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/enilo/.cache/nvim/packer_hererocks/2.0.5/share/lua/5.1/?.lua;/home/enilo/.cache/nvim/packer_hererocks/2.0.5/share/lua/5.1/?/init.lua;/home/enilo/.cache/nvim/packer_hererocks/2.0.5/lib/luarocks/rocks-5.1/?.lua;/home/enilo/.cache/nvim/packer_hererocks/2.0.5/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/enilo/.cache/nvim/packer_hererocks/2.0.5/lib/lua/5.1/?.so"
+local package_path_str = "/home/enilo/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/enilo/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/enilo/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/enilo/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/enilo/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -138,6 +138,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/enilo/.local/share/nvim/site/pack/packer/start/gruvbox",
     url = "https://github.com/morhetz/gruvbox"
+  },
+  ["gruvbox-material"] = {
+    loaded = true,
+    path = "/home/enilo/.local/share/nvim/site/pack/packer/start/gruvbox-material",
+    url = "https://github.com/sainnhe/gruvbox-material"
   },
   ["gv.vim"] = {
     loaded = true,
@@ -300,6 +305,11 @@ _G.packer_plugins = {
     path = "/home/enilo/.local/share/nvim/site/pack/packer/start/ultisnips",
     url = "https://github.com/sirver/ultisnips"
   },
+  ["v-vim"] = {
+    loaded = true,
+    path = "/home/enilo/.local/share/nvim/site/pack/packer/start/v-vim",
+    url = "https://github.com/ollykel/v-vim"
+  },
   vim = {
     loaded = true,
     path = "/home/enilo/.local/share/nvim/site/pack/packer/start/vim",
@@ -309,6 +319,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/enilo/.local/share/nvim/site/pack/packer/start/vim-commentary",
     url = "https://github.com/tpope/vim-commentary"
+  },
+  ["vim-css-toc"] = {
+    loaded = true,
+    path = "/home/enilo/.local/share/nvim/site/pack/packer/start/vim-css-toc",
+    url = "https://github.com/l00sed/vim-css-toc"
   },
   ["vim-deep-space"] = {
     loaded = true,
@@ -329,11 +344,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/enilo/.local/share/nvim/site/pack/packer/start/vim-rhubarb",
     url = "https://github.com/tpope/vim-rhubarb"
-  },
-  ["vim-rooter"] = {
-    loaded = true,
-    path = "/home/enilo/.local/share/nvim/site/pack/packer/start/vim-rooter",
-    url = "https://github.com/airblade/vim-rooter"
   },
   ["vim-signify"] = {
     loaded = true,
@@ -360,6 +370,16 @@ _G.packer_plugins = {
     path = "/home/enilo/.local/share/nvim/site/pack/packer/start/vim-test",
     url = "https://github.com/vim-test/vim-test"
   },
+  ["vim-unity-snippets"] = {
+    loaded = true,
+    path = "/home/enilo/.local/share/nvim/site/pack/packer/start/vim-unity-snippets",
+    url = "https://github.com/Mathijs-Bakker/vim-unity-snippets"
+  },
+  ["vim-unreal"] = {
+    loaded = true,
+    path = "/home/enilo/.local/share/nvim/site/pack/packer/start/vim-unreal",
+    url = "https://github.com/drichardson/vim-unreal"
+  },
   ["vim-vsnip"] = {
     loaded = true,
     path = "/home/enilo/.local/share/nvim/site/pack/packer/start/vim-vsnip",
@@ -369,6 +389,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/enilo/.local/share/nvim/site/pack/packer/start/which-key.nvim",
     url = "https://github.com/folke/which-key.nvim"
+  },
+  ["zig.vim"] = {
+    loaded = true,
+    path = "/home/enilo/.local/share/nvim/site/pack/packer/start/zig.vim",
+    url = "https://github.com/ziglang/zig.vim"
   }
 }
 

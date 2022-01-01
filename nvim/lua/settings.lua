@@ -117,6 +117,7 @@ opt.dir = '/tmp'
 opt.termguicolors = true
 opt.background = 'dark'
 
+opt.encoding = "UTF-8"
 -- Present color scheme.
 -- cmd 'colorscheme ayu-dark'
 -- 
