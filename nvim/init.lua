@@ -39,7 +39,8 @@ require 'egun-nvimtree'
 require 'egun-telescope'
 
 -- Configure Floating term.
-require 'egun-floaterm'
+-- require 'egun-floaterm'
+require 'egun-toggleterm'
 
 -- TreeSitter configs.
 require 'egun-treesitter'
@@ -61,3 +62,8 @@ require 'egun-whichkey'
 
 -- Give me pretty lsp help.
 require 'egun-lspsaga'
+
+-- Omnisharp helper.
+-- require 'egun-vimsharpenup'
+
+-- require 'egun-nim'

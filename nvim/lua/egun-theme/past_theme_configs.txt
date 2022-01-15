@@ -29,3 +29,8 @@ Tokyonight
 --vim.cmd 'colorscheme tokyonight'
 
 
+-- For vim-felipec
+Configs.
+
+vim.g.lightline = { 'colorscheme': felipec }
+vim.g.airline_theme = 'felipec'

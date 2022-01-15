@@ -84,10 +84,11 @@
     	"description": "Create a switch-case function."
     },
 
-    "Class": {
+    "Class": 
+    {
         "prefix": ["class"],
         "body": [
-            "class $1"
+            "class $1",
             "{",
             "\t$2",
             "public:",
@@ -97,7 +98,8 @@
         "description": "Create a class."
     },
 
-    "Struct": {
+    "Struct": 
+    {
         "prefix": ["struct"],
         "body": [
             "struct $1 {",

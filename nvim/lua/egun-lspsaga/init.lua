@@ -54,6 +54,19 @@ require('lspsaga').init_lsp_saga({
 
 })
 
+-- This is an expirament, you must consolidate this asap.
+local on_attach = function()
+  local mappings =
+  {
+    mappings =
+    {
+      ['\\ld'] = "<cmd>lua require'lspsaga.diagnostic'.show_line_diagnostics()<CR>",
+      ['<c-]'] = '<cmd>lua vim.lsp.buf.definition()<CR>',
+      ['K'] = "<cmd>lua require('lspsaga.hover').render_hover_doc()<CR>",
+      ['gd'] = '<cmd>lua vim.lsp.buf.declaration()<CR>',
+    }
+  }
+end
 
 -- like server_filetype_map = {metals = {'sbt', 'scala'}}
 -- server_filetype_map = {}

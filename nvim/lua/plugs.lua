@@ -19,7 +19,7 @@ vim.api.nvim_exec([[
 local use = require('packer').use
 require('packer').startup(function()
 
-  use 
+  use
   {
     'wbthomason/packer.nvim',
      opt = true
@@ -28,10 +28,10 @@ require('packer').startup(function()
   -- Auto close delimiters
   use 'kana/vim-smartinput'
   use 'tpope/vim-commentary'
-  use 
+  use
   {
     'nvim-telescope/telescope.nvim',
-    requires = 
+    requires =
     {
       {'nvim-lua/popup.nvim'},
       {'nvim-lua/plenary.nvim'}
@@ -41,14 +41,16 @@ require('packer').startup(function()
   use 'joshdick/onedark.vim'
   use 'itchyny/lightline.vim'
 
-  use 
-  { 
+  use
+  {
     'glepnir/galaxyline.nvim',
-     requires = 
-       'kyazdani42/nvim-web-devicons' 
+     requires =
+       'kyazdani42/nvim-web-devicons'
   }
 
   use 'neovim/nvim-lspconfig'
+  use {'ray-x/navigator.lua', requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}}
+
 
   -- Provides autocompletion and is completely
   -- written in lua.
@@ -66,10 +68,10 @@ require('packer').startup(function()
 
   -- TreeSitter.
   use 'nvim-treesitter/nvim-treesitter'
-  use 
+  use
   {
     'ojroques/nvim-lspfuzzy',
-    requires = 
+    requires =
     {
       {'junegunn/fzf'},
       {'junegunn/fzf.vim'},  -- to enable preview (optional)
@@ -77,14 +79,14 @@ require('packer').startup(function()
   }
 
   -- Lua implementation of fzf
-  use 
+  use
   {
     'ibhagwan/fzf-lua',
 
     -- icon support
-    requires = 
-    { 
-      'kyazdani42/nvim-web-devicons' 
+    requires =
+    {
+      'kyazdani42/nvim-web-devicons'
     }
   }
 
@@ -108,6 +110,7 @@ require('packer').startup(function()
   use 'Shatur/neovim-ayu'
   use 'tyrannicaltoucan/vim-deep-space'
   use 'haystackandroid/snow'
+  use 'felipec/vim-felipec'
 
   -- Welcome me.
   use 'glepnir/dashboard-nvim'
@@ -165,12 +168,12 @@ require('packer').startup(function()
   use 'akinsho/nvim-bufferline.lua'
 
   -- Gitsigns.
-  use 
+  use
   {
-    'lewis6991/gitsigns.nvim', 
-     requires = 
-     { 
-       'nvim-lua/plenary.nvim' 
+    'lewis6991/gitsigns.nvim',
+     requires =
+     {
+       'nvim-lua/plenary.nvim'
      }
    }
 
@@ -203,5 +206,17 @@ require('packer').startup(function()
 
   -- Support for vlang programming language.
   use 'ollykel/v-vim'
+
+  -- Suppose help with omnisharp.
+  use 'nickspoons/vim-sharpenup'
+
+  -- C/C++ specific precision text objects.
+  use 'kana/vim-textobj-user'
+  use 'libclang-vim/libclang-vim'
+  use 'libclang-vim/vim-textobj-clang'
+
+  use 'wellle/targets.vim'
+  use 'zah/nim.vim'
+  use 'ray-x/sad.nvim'
 
 end)

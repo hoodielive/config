@@ -144,6 +144,11 @@ _G.packer_plugins = {
     path = "/home/enilo/.local/share/nvim/site/pack/packer/start/gruvbox-material",
     url = "https://github.com/sainnhe/gruvbox-material"
   },
+  ["guihua.lua"] = {
+    loaded = true,
+    path = "/home/enilo/.local/share/nvim/site/pack/packer/start/guihua.lua",
+    url = "https://github.com/ray-x/guihua.lua"
+  },
   ["gv.vim"] = {
     loaded = true,
     path = "/home/enilo/.local/share/nvim/site/pack/packer/start/gv.vim",
@@ -158,6 +163,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/enilo/.local/share/nvim/site/pack/packer/start/lazygit.nvim",
     url = "https://github.com/kdheepak/lazygit.nvim"
+  },
+  ["libclang-vim"] = {
+    loaded = true,
+    path = "/home/enilo/.local/share/nvim/site/pack/packer/start/libclang-vim",
+    url = "https://github.com/libclang-vim/libclang-vim"
   },
   ["lightline.vim"] = {
     loaded = true,
@@ -174,6 +184,11 @@ _G.packer_plugins = {
     path = "/home/enilo/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
     url = "https://github.com/glepnir/lspsaga.nvim"
   },
+  ["navigator.lua"] = {
+    loaded = true,
+    path = "/home/enilo/.local/share/nvim/site/pack/packer/start/navigator.lua",
+    url = "https://github.com/ray-x/navigator.lua"
+  },
   ["neoscroll.nvim"] = {
     loaded = true,
     path = "/home/enilo/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
@@ -183,6 +198,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/enilo/.local/share/nvim/site/pack/packer/start/neovim-ayu",
     url = "https://github.com/Shatur/neovim-ayu"
+  },
+  ["nim.vim"] = {
+    loaded = true,
+    path = "/home/enilo/.local/share/nvim/site/pack/packer/start/nim.vim",
+    url = "https://github.com/zah/nim.vim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -275,6 +295,11 @@ _G.packer_plugins = {
     path = "/home/enilo/.local/share/nvim/site/pack/packer/start/rnvimr",
     url = "https://github.com/kevinhwang91/rnvimr"
   },
+  ["sad.nvim"] = {
+    loaded = true,
+    path = "/home/enilo/.local/share/nvim/site/pack/packer/start/sad.nvim",
+    url = "https://github.com/ray-x/sad.nvim"
+  },
   ["seoul256.vim"] = {
     loaded = true,
     path = "/home/enilo/.local/share/nvim/site/pack/packer/start/seoul256.vim",
@@ -284,6 +309,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/enilo/.local/share/nvim/site/pack/packer/start/snow",
     url = "https://github.com/haystackandroid/snow"
+  },
+  ["targets.vim"] = {
+    loaded = true,
+    path = "/home/enilo/.local/share/nvim/site/pack/packer/start/targets.vim",
+    url = "https://github.com/wellle/targets.vim"
   },
   ["telescope.nvim"] = {
     loaded = true,
@@ -330,6 +360,11 @@ _G.packer_plugins = {
     path = "/home/enilo/.local/share/nvim/site/pack/packer/start/vim-deep-space",
     url = "https://github.com/tyrannicaltoucan/vim-deep-space"
   },
+  ["vim-felipec"] = {
+    loaded = true,
+    path = "/home/enilo/.local/share/nvim/site/pack/packer/start/vim-felipec",
+    url = "https://github.com/felipec/vim-felipec"
+  },
   ["vim-floaterm"] = {
     loaded = true,
     path = "/home/enilo/.local/share/nvim/site/pack/packer/start/vim-floaterm",
@@ -344,6 +379,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/enilo/.local/share/nvim/site/pack/packer/start/vim-rhubarb",
     url = "https://github.com/tpope/vim-rhubarb"
+  },
+  ["vim-sharpenup"] = {
+    loaded = true,
+    path = "/home/enilo/.local/share/nvim/site/pack/packer/start/vim-sharpenup",
+    url = "https://github.com/nickspoons/vim-sharpenup"
   },
   ["vim-signify"] = {
     loaded = true,
@@ -369,6 +409,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/enilo/.local/share/nvim/site/pack/packer/start/vim-test",
     url = "https://github.com/vim-test/vim-test"
+  },
+  ["vim-textobj-clang"] = {
+    loaded = true,
+    path = "/home/enilo/.local/share/nvim/site/pack/packer/start/vim-textobj-clang",
+    url = "https://github.com/libclang-vim/vim-textobj-clang"
+  },
+  ["vim-textobj-user"] = {
+    loaded = true,
+    path = "/home/enilo/.local/share/nvim/site/pack/packer/start/vim-textobj-user",
+    url = "https://github.com/kana/vim-textobj-user"
   },
   ["vim-unity-snippets"] = {
     loaded = true,

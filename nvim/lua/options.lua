@@ -13,7 +13,7 @@ local bo = vim.bo
 -- Call Vim functions.
 local fn = vim.fn
 
--- 
+--
 local wo = vim.wo
 
 -- Execute Vim commands e.g. cmd('pwd')
@@ -45,7 +45,7 @@ opt.wildmode = 'longest:list,full'
 opt.list = true
 
 -- TODO Make these beautiful with hack fonts.
-opt.listchars = 'tab:▸ ,trail:·' 
+opt.listchars = 'tab:▸ ,trail:·'
 
 -- Maintain indent of current line.
 opt.autoindent = true

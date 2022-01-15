@@ -1,4 +1,5 @@
 -- Function for map.
+local opts = vim.opt
 
 function map(mode, lhs, rhs, opts)
     local options = { noremap = true }
@@ -21,11 +22,10 @@ map("n", "<space>r", ":RnvimrToggle<CR>", opts)
 -- Evoke fzf with CTRL-p
 map('n', '<c-P>', "<cmd>lua require('fzf-lua').files()<CR>", { noremap = true, silent = true })
 
-map('n', '<c-t>',":ToggleTerm<CR>", opts)
+-- map('n', '<c-t>',":ToggleTerm<CR>", opts)
 
--- map('n', '<c-x>', ":split<CR>", opts)
-
-map('n', '<c-\\>', ":vsplit<CR>", opts)
+map('n', '<c-x>', ":split<CR>", opts)
+map('n', '<c-s>', ":vsplit<CR>", opts)
 
 map('n', '<space>,', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
 map('n', '<space>;', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
@@ -37,4 +37,13 @@ map('n', '<space>m', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
 map('n', '<space>i', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
 map('n', '<space>s', '<cmd>lua vim.lsp.buf.document_symbol()<CR>', opts)
 
+-- Evoke Lazygit for git stuff.
 map('n', '<space>L', ':LazyGit<CR>', opts)
+
+map('n', '<silent>gr', ':Lspsaga rename<CR>', opts)
+
+-- Source init.lua
+map('n', '<space>ss', ':so ~/.config/nvim/init.lua', opts)
+
+-- Compile C++ programs
+map('n', '<space>c', ':w <CR> :!g++ % && ./a.out <CR>', opts)
