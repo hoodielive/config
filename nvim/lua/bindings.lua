@@ -46,4 +46,4 @@ map('n', '<silent>gr', ':Lspsaga rename<CR>', opts)
 map('n', '<space>ss', ':so ~/.config/nvim/init.lua', opts)
 
 -- Compile C++ programs
-map('n', '<space>c', ':w <CR> :!g++ % && ./a.out <CR>', opts)
+map('n', '<space>c', ':w <CR> :!g++ % -o %< && ./%< <CR>', opts)
