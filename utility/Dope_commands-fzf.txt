@@ -1,0 +1,35 @@
+# Get a list of strings
+yes | head -10 | awk '{ pritn NR, NR % 2 == 0? "even" : "odd" }'
+
+# Same but with fzf
+yes | head -10 | awk '{ pritn NR, NR % 2 == 0? "even" : "odd" }' | fzf
+
+# fuzzy search files.
+find . -type f | fzf or fzf
+
+# exact matches only
+fzf -e
+
+# delimiters and negation
+fzf .sh$ !private
+
+# fuzzy search and tag
+fzf | xargs ls -l (tab and shift-tab is how you select/tag)
+
+# Select which files to open in vim
+vim -o `fzf`
+
+# combine it with history to filter recent commands
+history | fzf +s --tac
+
+# trigger fuzzy completion with **
+nvim ~/.config/**
+
+# Which directory to cd into?
+cd /**
+
+# [[ ssh ]]
+ssh **
+
+# instead of pgrep and then kill
+kill -9 <tab>
