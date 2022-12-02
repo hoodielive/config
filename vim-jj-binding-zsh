@@ -1,0 +1,2 @@
+bindkey -M viins 'jj' vi-cmd-mode
+place in .zshrc or .aliases.zsh (ancestors.zsh)
