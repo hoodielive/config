@@ -1,0 +1,15 @@
+df .  = delete till dot.
+ge = go to the end value backwards
+xp = switch characters coed code (swap order of letters/chars) 
+d7j = delete down 7 lines (relative numbers on is a +)
+7dd = Works exactly like d7j
+:-16,-14,co. = -16 to -14 copy to here (.)
+Vlines gP to = select lines and copy underneath lines
+HML = capital HML High, Middle, Low (get cursor to where its suppose to be)
+vit or cit = text inside of tags
+cursor gf - goto file 
+ctrl - = control and minus key will go back to file you gf'd to.
+
+
+#  Vim Surround is essential.
+vim surround plugin

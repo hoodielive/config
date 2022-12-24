@@ -1,0 +1,36 @@
+function sudo --description "Replacement for Bash 'sudo !!' command to run last command using sudo."
+    if test "$argv" = !!
+    eval command sudo $history[1]
+else
+    command sudo $argv
+    end
+end
+
+or 
+
+function sudo!!
+    eval sudo $history[1]
+end
+
+or
+
+function .runsudo --description 'Run current command line as root'
+    commandline -C 0
+    commandline -i 'sudo '
+    commandline -f execute
+end
+bind \es .runsudo
+
+# Then by pressing M-S, you can run the current command with sudo
+# just put in front of it.
+
+# The following is a better implementation that saves the cursor 
+# position instead of outright executing it.
+
+function .runsudo --description 'Run current command line as root'
+    set cursor_pos (echo (commandline -C) +5 | bc)
+    commandline -C 0
+    commandline -i 'sudo '
+    commandline -C "$cursor_pos"
+end
+bind \es ".runsudo"
