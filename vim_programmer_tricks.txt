@@ -9,7 +9,18 @@ HML = capital HML High, Middle, Low (get cursor to where its suppose to be)
 vit or cit = text inside of tags
 cursor gf - goto file 
 ctrl - = control and minus key will go back to file you gf'd to.
+V <,'>s/replace/word/ = Visual selection : to replace line
+:15,30s/target/replacements/  = replace between these lines
+daw = delete whole current word
+dt, = delete up until the comma
+de = delete to the end of word
+d2e = delete to the end of the next word
+dt) = delete up to the next parathesis
+d/rails = delete up to the first searched rails
+dvb = delete from cursor to beginning of word 
 
+
+:help motion.txt
 
 #  Vim Surround is essential.
 vim surround plugin
